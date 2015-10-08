@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'leaflet-directive', 'starter.controllers', 
     })
 
     
-    .state('tab.perfil', {
+   .state('tab.perfil', {
       url:'/perfil',
       views:{
         'tab-perfil':{
@@ -73,15 +73,15 @@ angular.module('starter', ['ionic', 'leaflet-directive', 'starter.controllers', 
       
     })
 
-  .state('tab.registro', {
-    url: '/registro',
-    views: {
-      'tab-registro': {
-        templateUrl: 'templates/tab-registro.html',
-        controller: 'RegistroCtrl'
+    /*.state('tab.registro', {
+      url: '/registro',
+      views: {
+        'tab-registro': {
+          templateUrl: 'templates/tab-registro.html',
+          controller: 'RegistroCtrl'
+        }
       }
-    }
-  });
+    });*/
 
 
   // if none of the above states are matched, use this as the fallback
