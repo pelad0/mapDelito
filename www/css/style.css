@@ -1,0 +1,11 @@
+/* Empty. Add your own CSS if you like */
+.center{
+	text-align: center
+}
+.leaflet-top .leaflet-control {
+  margin-top: 50px;
+}
+.arriba{
+	margin-top: 50px;
+	
+}
