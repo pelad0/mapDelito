@@ -48,7 +48,13 @@ angular.module('starter.controllers', [])
 
 
   .controller('RegistroCtrl', function ($scope) {
-
+      $scope.registro=function(us, pass, pass2, em){
+        console.log(us);
+        console.log(pass);
+        console.log(pass2);
+        console.log(em);
+       
+      }
   })
 
   .controller('PerfilCtrl', function ($scope, $http) {

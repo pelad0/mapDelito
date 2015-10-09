@@ -73,7 +73,7 @@ angular.module('starter', ['ionic', 'leaflet-directive', 'starter.controllers', 
 
       })
 
-    /*.state('tab.registro', {
+    .state('tab.registro', {
       url: '/registro',
       views: {
         'tab-registro': {
@@ -81,7 +81,7 @@ angular.module('starter', ['ionic', 'leaflet-directive', 'starter.controllers', 
           controller: 'RegistroCtrl'
         }
       }
-    });*/
+    });
 
 
     // if none of the above states are matched, use this as the fallback
