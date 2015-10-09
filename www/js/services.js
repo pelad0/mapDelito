@@ -1,7 +1,20 @@
 angular.module('starter.services', [])
+  .factory('user', function(){
+    return{
+      esString: function(nombre){
+        var expRegNom= /^\w{4,}$/;
+        if(!expRegNom.test(nombre)){
+          alert("El Usuario debe contener al menos 4 caracteres.")
+          return;
+        }
+      }
+    }
+  })
 
   .factory('Posiciones', function () {
     // Might use a resource here that returns a JSON arra
+ 
+ 
  
     // Some fake testing data
     var posiciones = [{
@@ -47,9 +60,11 @@ angular.module('starter.services', [])
       all: function () {
         return posiciones;
       },
+      
       remove: function (chat) {
         posiciones.splice(posiciones.indexOf(chat), 1);
       },
+      
       get: function (chatId) {
         for (var i = 0; i < posiciones.length; i++) {
           if (posiciones[i].id === parseInt(chatId)) {
@@ -59,4 +74,6 @@ angular.module('starter.services', [])
         return null;
       }
     };
+    
+    
   });
