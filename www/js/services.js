@@ -1,13 +1,29 @@
 angular.module('starter.services', [])
-  .factory('user', function(){
-    return{
-      esString: function(nombre){
-        var expRegNom= /^\w{4,}$/;
-        if(!expRegNom.test(nombre)){
+  .factory('user', function () {
+    return {
+      esString: function (nombre) {
+        var expRegNom = /^\w{4,}$/;
+        if (!expRegNom.test(nombre)) {
           alert("El Usuario debe contener al menos 4 caracteres.")
           return;
         }
+      },
+      passOk: function (pass1, pass2) {
+        if (pass1 !== pass2) {
+          alert("Las contraseñas no coinciden")
+          return;
+        }
+      },
+      emailOk: function (email) {
+        var expRegEm = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+        if(!expRegEm.test(email)){
+          alert("El formato de email no es valido");
+          return;
+        }
       }
+
+
+
     }
   })
 
@@ -60,11 +76,11 @@ angular.module('starter.services', [])
       all: function () {
         return posiciones;
       },
-      
+
       remove: function (chat) {
         posiciones.splice(posiciones.indexOf(chat), 1);
       },
-      
+
       get: function (chatId) {
         for (var i = 0; i < posiciones.length; i++) {
           if (posiciones[i].id === parseInt(chatId)) {
@@ -74,6 +90,6 @@ angular.module('starter.services', [])
         return null;
       }
     };
-    
-    
+
+
   });

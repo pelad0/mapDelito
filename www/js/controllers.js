@@ -51,6 +51,8 @@ angular.module('starter.controllers', [])
       $scope.registro=function(us, pass, pass2, em){
         
         user.esString(us);
+        user.passOk(pass,pass2);
+        user.emailOk(em);
         console.log(us);
         console.log(pass);
         console.log(pass2);
