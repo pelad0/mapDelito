@@ -30,10 +30,6 @@ angular.module('starter.controllers', [])
 
   })
 
-
-
-
-
   .controller('LoginCtrl', function ($scope) {
     // With the new view caching in Ionic, Controllers are only called
     // when they are recreated or on app start, instead of every page change.
@@ -66,11 +62,7 @@ angular.module('starter.controllers', [])
     /* $http.get("http://app.eatnow.com.do/regions").success(function(data){
        
        console.log(data);
-       
-      
-       
-      
-     })*/
+})*/
 
   });
 
