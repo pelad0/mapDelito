@@ -29,13 +29,13 @@ angular.module('starter.controllers', [])
       }
     };
     
-    console.log(objMarkers);
+    
 
     angular.extend($scope, {
       center: {
         lat: -33.30222020000,
         lng: -66.33679760000,
-        zoom: 10
+        zoom: 16
       },
       markers: objMarkers,
 
