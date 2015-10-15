@@ -1,6 +1,6 @@
 <ion-view view-title="Mapa">
   <ion-content class="padding">
-    <div name="step1">
+    <div name="step1" ng-show="(puntero===1)" ng-hide="!(puntero===1)">
       <div class="bar bar-header bar-calm ">
         <h1 class="title">Posicione su denuncia:</h1>
       </div>
@@ -9,13 +9,27 @@
 
       </leaflet>
 
-      <button class="button button-full button-positive">
+      <button class="button button-full button-positive" ng-click="sgte()">
         Denunciar
       </button>
     </div>
-    <div name="step2" hidden>
-      <leaflet width="100%" height="450px" center="center" markers="markers" padding-top="100">
+    <div name="step2" ng-show="(puntero===2)" ng-hide="!(puntero===2)">
+      <leaflet width="100%" height="250px" center="center" markers="markers" padding-top="100">x
+      </leaflet>
+      <div class="center">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="anterior()">Volver</a>
+        <a class="button icon-right ion-chevron-right button-clear button-dark" ng-click="sgte()">Siguiente</a>
 
+      </div>
+
+    </div>
+    <div name="step3" ng-show="(puntero===3)" ng-hide="!(puntero===3)">
+
+      <div class="center">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="anterior()">Volver</a>
+        <a class="button icon-right ion-chevron-right button-clear button-dark" ng-click="sgte()">Siguiente</a>
+
+      </div>
     </div>
   </ion-content>
 </ion-view>

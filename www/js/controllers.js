@@ -2,6 +2,7 @@ angular.module('starter.controllers', [])
 
   .controller('MapaCtrl', function ($scope, Posiciones) {
 
+    $scope.puntero=1;
     var objMarkers = {};
     var pos = Posiciones.all();
     console.log(pos);
@@ -11,7 +12,23 @@ angular.module('starter.controllers', [])
       objMarkers[p.name] = p;// Dentro del objeto "objMarkers", se crea una propiedad con el nombre q contenga p.name, a esa propiedad se le asigna el objeto p.
        
       console.log(p);
+      
     }
+    
+    
+    
+    $scope.anterior=function(){
+      if($scope.puntero>1){
+        $scope.puntero--;
+      }
+    };
+    
+    $scope.sgte=function(){
+        if($scope.puntero<3){
+        $scope.puntero++;
+      }
+    };
+    
     console.log(objMarkers);
 
     angular.extend($scope, {
