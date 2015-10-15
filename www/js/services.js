@@ -37,40 +37,10 @@ angular.module('starter.services', [])
       name: 'p1',
       lat: -33.30222020000,
       lng: -66.33679760000,
-      message: 'Aca estoy1',
+      message: 'Esta es su posicion',
       focus: true,
-      draggable: false
-    },
-      {
-        name: 'p2',
-        lat: -33.38222020000,
-        lng: -66.37679760000,
-        message: 'Aca estoy2',
-        focus: true,
-        draggable: false
-
-      },
-
-      {
-        name: 'p3',
-        lat: -33.40222020000,
-        lng: -66.28679760000,
-        message: 'Aca estoy3',
-        focus: true,
-        draggable: false
-      },
-      {
-        name: 'p4',
-        lat: -33.33222020000,
-        lng: -66.43679760000,
-        message: 'Aca estoy4',
-        focus: true,
-        draggable: true
-      }
-
-
-
-    ];
+      draggable: true
+    } ];
 
     return {
       all: function () {
